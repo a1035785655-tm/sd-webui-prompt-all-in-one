@@ -49,14 +49,20 @@ a1111-sd-webui-tagcomplete 的 Translation filename 设置。
 
 ## 在 sd-webui-prompt-all-in-one 中使用
 
-设置 → 翻译设置 → 本地CSV，选择本文件即可；或在
-`storage/tagCompleteFile.json` 中写入：
+**从本分支安装插件则无需任何配置**：词表已内置在 `tags/danbooru.zh_ALL.csv`，
+并通过 `storage/tagCompleteFile.json` 默认指向它，安装重启后中文翻译直接生效。
+
+单独使用时：把词表放入插件 `tags/` 目录，然后在 设置 → 翻译设置 → 本地CSV
+中选中它；或直接在 `storage/tagCompleteFile.json` 中写入：
 
 ```json
 "\\extensions\\sd-webui-prompt-all-in-one\\tags\\danbooru.zh_ALL.csv"
 ```
 
-（需将文件放入插件 `tags/` 目录；该目录被 `.gitignore` 排除，属运行时数据。）
+注意：`tags/` 目录在仓库中被 `.gitignore` 整体排除（属运行时数据），
+本分支通过 `tags/.gitignore` 中的 `!danbooru.zh_ALL.csv` 例外规则将其纳入版本管理；
+`storage/tagCompleteFile.json` 同理。若更新插件时 git 提示这两个文件与本地已有
+文件冲突，保留你本地已有的版本即可（说明你此前已自行配置过）。
 
 ## 许可证说明
 
