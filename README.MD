@@ -16,9 +16,9 @@
 
 sd-webui-prompt-all-in-one is an extension based on [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that aims to improve the user experience of the prompt/negative prompt input box. It has a more intuitive and powerful input interface, provides automatic translation, history and collection functions, and supports multiple languages to meet the needs of different users.
 
-## 🇨🇳 Change in this fork: bundled high-quality Chinese translation wordlist (works out of the box)
+## 🇨🇳 Chinese translation wordlist enhancement (bundled, enabled by default)
 
-This fork (branch `improved-zh-translation`) bundles a merged and improved Chinese translation wordlist `danbooru.zh_ALL.csv` (~**438k entries**) and **enables it by default** — install this fork the usual way and the local-CSV Chinese translation under the prompt works immediately, no settings needed.
+This PR bundles a merged and improved Chinese translation wordlist `danbooru.zh_ALL.csv` (~**438k entries**) and **enables it by default** — after merging, the local-CSV Chinese translation under the prompt works immediately, no settings needed.
 
 Key improvements over the commonly used machine-translated wordlist:
 
